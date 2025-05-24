@@ -49,37 +49,59 @@
         <div class="bubble bubble-29"></div>
         <div class="bubble bubble-30"></div>
       </div>
-      <!-- Profile card containing user information -->
-      <div class="profile-card">
-        <!-- Decorative dots in the profile card -->
-        <div class="dot left"></div>
-        <div class="dot right"></div>
-        <!-- Profile image container -->
-        <div class="profile-img"></div>
-        <!-- User's name with typing animation -->
-        <div class="name">Fares Abdel Sattar</div>
-        <!-- User's location -->
-        <div class="location">Alexandria , Egypt</div>
-        <!-- User's job title -->
-        <div class="title">AI Developer</div>
-        <!-- Statistics section -->
-        <div class="stats">
-          <!-- Individual stat items -->
-          <div class="stat">
-            <div class="stat-number">60</div>
-            <div class="stat-label">Posts</div>
+      <!-- Profile card or Auth forms container -->
+      <div class="auth-container">
+        <!-- Login Form -->
+        <div id="login-form" class="auth-form">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Password">
+            <button id="login-button">Login</button>
+            <p>Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+        </div>
+
+        <!-- Sign-up Form -->
+        <div id="signup-form" class="auth-form" style="display: none;">
+            <h2>Sign Up</h2>
+            <input type="email" id="signup-email" placeholder="Email">
+            <input type="password" id="signup-password" placeholder="Password">
+            <input type="text" id="signup-name" placeholder="Full Name">
+            <input type="text" id="signup-job" placeholder="Job Title">
+            <input type="text" id="signup-location" placeholder="Location">
+            <input type="number" id="signup-projects" placeholder="Number of Projects">
+            <input type="file" id="signup-avatar" accept="image/*">
+            <button id="signup-button">Sign Up</button>
+            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+        </div>
+
+        <!-- Profile card containing user information -->
+        <div id="profile-card" class="profile-card" style="display: none;">
+          <!-- Decorative dots in the profile card -->
+          <div class="dot left"></div>
+          <div class="dot right"></div>
+          <!-- Profile image container -->
+          <div class="profile-img"></div>
+          <!-- User's name with typing animation -->
+          <div class="name"></div>
+          <!-- User's location -->
+          <div class="location"></div>
+          <!-- User's job title -->
+          <div class="title"></div>
+          <!-- Statistics section -->
+          <div class="stats">
+            <!-- Individual stat items -->
+            <div class="stat">
+              <div class="stat-number"></div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <!-- Removed other stat items as they are not needed based on the user request -->
           </div>
-          <div class="stat">
-            <div class="stat-number">60</div>
-            <div class="stat-label">Posts</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">60</div>
-            <div class="stat-label">Posts</div>
-          </div>
+          <button id="logout-button">Logout</button>
         </div>
       </div>
     </div>
+    <!-- Supabase CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <!-- JavaScript file for animations -->
     <script src="script.js"></script>
   </body>
