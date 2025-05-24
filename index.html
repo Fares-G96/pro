@@ -4,105 +4,36 @@
     <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Full Page Profile Card</title>
+    <title>Login</title>
     <!-- Google Fonts import for Merienda and Quicksand fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Quicksand:wght@500&display=swap"
       rel="stylesheet">
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="auth.css">
   </head>
   <body>
-    <!-- Main container for the entire page content -->
-    <div class="container">
-      <!-- Banner section with gradient background and animated bubbles -->
-      <div class="banner">
-        <!-- Multiple bubble elements for background animation -->
-        <div class="bubble bubble-1"></div>
-        <div class="bubble bubble-2"></div>
-        <div class="bubble bubble-3"></div>
-        <div class="bubble bubble-4"></div>
-        <div class="bubble bubble-5"></div>
-        <div class="bubble bubble-6"></div>
-        <div class="bubble bubble-7"></div>
-        <div class="bubble bubble-8"></div>
-        <div class="bubble bubble-9"></div>
-        <div class="bubble bubble-10"></div>
-        <div class="bubble bubble-11"></div>
-        <div class="bubble bubble-12"></div>
-        <div class="bubble bubble-13"></div>
-        <div class="bubble bubble-14"></div>
-        <div class="bubble bubble-15"></div>
-        <div class="bubble bubble-16"></div>
-        <div class="bubble bubble-17"></div>
-        <div class="bubble bubble-18"></div>
-        <div class="bubble bubble-19"></div>
-        <div class="bubble bubble-20"></div>
-        <div class="bubble bubble-21"></div>
-        <div class="bubble bubble-22"></div>
-        <div class="bubble bubble-23"></div>
-        <div class="bubble bubble-24"></div>
-        <div class="bubble bubble-25"></div>
-        <div class="bubble bubble-26"></div>
-        <div class="bubble bubble-27"></div>
-        <div class="bubble bubble-28"></div>
-        <div class="bubble bubble-29"></div>
-        <div class="bubble bubble-30"></div>
-      </div>
-      <!-- Profile card or Auth forms container -->
-      <div class="auth-container">
-        <!-- Login Form -->
-        <div id="login-form" class="auth-form">
-            <h2>Login</h2>
-            <input type="email" id="login-email" placeholder="Email">
-            <input type="password" id="login-password" placeholder="Password">
-            <button id="login-button">Login</button>
-            <p>Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
-        </div>
-
-        <!-- Sign-up Form -->
-        <div id="signup-form" class="auth-form" style="display: none;">
-            <h2>Sign Up</h2>
-            <input type="email" id="signup-email" placeholder="Email">
-            <input type="password" id="signup-password" placeholder="Password">
-            <input type="text" id="signup-name" placeholder="Full Name">
-            <input type="text" id="signup-job" placeholder="Job Title">
-            <input type="text" id="signup-location" placeholder="Location">
-            <input type="number" id="signup-projects" placeholder="Number of Projects">
-            <input type="file" id="signup-avatar" accept="image/*">
-            <button id="signup-button">Sign Up</button>
-            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
-        </div>
-
-        <!-- Profile card containing user information -->
-        <div id="profile-card" class="profile-card" style="display: none;">
-          <!-- Decorative dots in the profile card -->
-          <div class="dot left"></div>
-          <div class="dot right"></div>
-          <!-- Profile image container -->
-          <div class="profile-img"></div>
-          <!-- User's name with typing animation -->
-          <div class="name"></div>
-          <!-- User's location -->
-          <div class="location"></div>
-          <!-- User's job title -->
-          <div class="title"></div>
-          <!-- Statistics section -->
-          <div class="stats">
-            <!-- Individual stat items -->
-            <div class="stat">
-              <div class="stat-number"></div>
-              <div class="stat-label">Projects</div>
-            </div>
-            <!-- Removed other stat items as they are not needed based on the user request -->
+    <div class="auth-container">
+      <div class="auth-card">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
           </div>
-          <button id="logout-button">Logout</button>
-        </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <button type="submit" class="auth-button">Login</button>
+        </form>
+        <p class="auth-link">Don't have an account? <a href="register.html">Register here</a></p>
       </div>
     </div>
-    <!-- Supabase CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <!-- JavaScript file for animations -->
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
   </body>
 </html>
