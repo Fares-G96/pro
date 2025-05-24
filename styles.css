@@ -356,7 +356,6 @@ html {
     position: relative;
     min-height: 50px;
     display: inline-block;
-    margin-bottom: 10px;
 }
 
 /* Blinking cursor effect for name */
@@ -379,7 +378,6 @@ html {
     font-size: 16px;
     color: #888;
     margin-top: 4px;
-    margin-bottom: 15px;
 }
 
 /* Title text styles */
@@ -392,8 +390,7 @@ html {
     text-align: center;
     vertical-align: middle;
     color: #6E6E6E;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 55px;
 }
 
 /* Stats container styles */
@@ -402,7 +399,6 @@ html {
     justify-content: center;
     gap: 60px;
     margin-top: 20px;
-    margin-bottom: 30px;
     flex-wrap: wrap;
 }
 
@@ -449,11 +445,6 @@ html {
 
     .stats {
         gap: 40px;
-    }
-
-    .bubble {
-        display: block;
-        opacity: 0.5;
     }
 }
 
@@ -551,95 +542,4 @@ html {
         display: block;
         opacity: 0.5;
     }
-}
-
-/* Styles for the auth forms container */
-.auth-container {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 400px; /* Adjust max-width for forms */
-  background: white;
-  border-radius: 30px;
-  padding: 40px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-/* Styles for individual auth forms */
-.auth-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.auth-form h2 {
-  font-family: 'Merienda', cursive;
-  margin-bottom: 20px;
-  color: #444;
-}
-
-.auth-form input[type="email"],
-.auth-form input[type="password"],
-.auth-form input[type="text"],
-.auth-form input[type="number"] {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.auth-form input[type="file"] {
-    padding: 10px 0; /* Adjust padding for file input */
-}
-
-.auth-form button {
-  padding: 10px;
-  background: linear-gradient(90deg, #FF4286 0%, #FD7F78 100%);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.auth-form button:hover {
-    background: linear-gradient(90deg, #FD7F78 0%, #FF4286 100%);
-}
-
-.auth-form p {
-  margin-top: 15px;
-  font-size: 14px;
-  color: #555;
-}
-
-.auth-form a {
-  color: #FF4286;
-  text-decoration: none;
-}
-
-.auth-form a:hover {
-  text-decoration: underline;
-}
-
-/* Styles for the logout button */
-#logout-button {
-  padding: 10px;
-  background: linear-gradient(90deg, #FD7F78 0%, #FF4286 100%); /* Reversed gradient for distinction */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 20px; /* Space above the button */
-  width: auto; /* Adjust width as needed */
-  display: inline-block; /* Allow margin and padding */
-}
-
-#logout-button:hover {
-    background: linear-gradient(90deg, #FF4286 0%, #FD7F78 100%);
 }
